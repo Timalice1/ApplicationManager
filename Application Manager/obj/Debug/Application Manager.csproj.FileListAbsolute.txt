@@ -1,0 +1,16 @@
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\bin\Debug\Application Manager.exe.config
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\bin\Debug\Application Manager.exe
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\bin\Debug\Application Manager.pdb
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\MainWindow.g.cs
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\App.g.cs
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager_MarkupCompile.cache
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager_MarkupCompile.lref
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\MainWindow.baml
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.g.resources
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application_Manager.Properties.Resources.resources
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.exe
+C:\Users\admin\Desktop\My_Folder\Csharp\Application Manager\Application Manager\obj\Debug\Application Manager.pdb

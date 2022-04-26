@@ -21,7 +21,8 @@
         
         <!--ToolBar-->
         <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#FFE8E6E6">
-            <Button Name="btnUninstall" Content="Uninstall" Margin="5" IsEnabled="false"/>
+            <Button Name="btnUninstall" Content="Uninstall" Margin="5" IsEnabled="false"
+                    Click="btnUninstall_Click"/>
         </StackPanel>
 
         <!--Apps list-->

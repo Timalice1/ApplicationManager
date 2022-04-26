@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "08003502-fad1-4b3d-ad03-8ee824115b21": {
+      "ProjectGuid": "08003502-fad1-4b3d-ad03-8ee824115b21",
+      "DisplayName": "Application Manager",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

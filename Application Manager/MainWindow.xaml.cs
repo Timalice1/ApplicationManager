@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,8 @@ namespace Application_Manager {
                             }
 
                             pathes.Add(path);
+
+                            var panel = new StackPanel() { Orientation = Orientation.Horizontal };
                             appList.Items.Add(name);
                         }
                         catch (Exception ex) { }
@@ -51,14 +54,27 @@ namespace Application_Manager {
         private void appList_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             try {
                 var index = appList.SelectedIndex;
-                var files = Directory.GetFiles(pathes[index]);
-                if (files.Contains($@"{pathes[index]}unins000.exe")) {
-                    btnUninstall.IsEnabled = true;
-                    uninstallFile = $@"{pathes[index]}unins000.exe";
+                var files = Directory.GetFiles(pathes[index], "*.*", SearchOption.AllDirectories);
+                string name;
+                foreach (var file in files) {
+                    if (file.Contains("unins000.exe")) {
+                        btnUninstall.IsEnabled = true;
+                        uninstallFile = file;
+                        return;
+                    }else btnUninstall.IsEnabled = false;
                 }
-                else btnUninstall.IsEnabled = false;
             }catch (Exception ex) {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUninstall_Click(object sender, RoutedEventArgs e) {
+            var res = MessageBox.Show($"You realy want uninstall \"{appList.SelectedItem}\"?", "Uninstall", MessageBoxButton.OKCancel);
+            if(res == MessageBoxResult.OK) {
+                Process.Start(uninstallFile);
+                pathes.RemoveAt(appList.SelectedIndex);
+                appList.Items.RemoveAt(appList.SelectedIndex);
+                btnUninstall.IsEnabled = false;
             }
         }
     }

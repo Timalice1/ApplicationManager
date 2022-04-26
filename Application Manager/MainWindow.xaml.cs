@@ -53,14 +53,16 @@ namespace Application_Manager {
 
                             //var panel = new StackPanel();
                             var grid = new Grid();
-                            var col1 = new ColumnDefinition() { Width = new GridLength(500)};
-                            var col2 = new ColumnDefinition() { Width = new GridLength(200) };
-                            var col3 = new ColumnDefinition();
+                            //var col1 = new ColumnDefinition() /*{ Width = new GridLength(500)}*/;
+                            //var col2 = new ColumnDefinition() /*{ Width = new GridLength(200)}*/;
+                            //var col3 = new ColumnDefinition();
 
-                            grid.ColumnDefinitions.Add(col1);
-                            grid.ColumnDefinitions.Add(col2);
-                            grid.ColumnDefinitions.Add(col3);
+                            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(500) });
+                            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(150)});
+                            grid.ColumnDefinitions.Add(new ColumnDefinition());
+
                             //panel.Children.Add(grid);
+
 
                             //Add app name
                             var tbName = new TextBlock { Text = name };
@@ -113,7 +115,7 @@ namespace Application_Manager {
         }
 
         private void btnUninstall_Click(object sender, RoutedEventArgs e) {
-            var name = ((((((appList.SelectedItem) as StackPanel).Children[0]) as Grid).Children[0]) as TextBlock).Text;
+            var name = (((appList.SelectedItem) as Grid).Children[0] as TextBlock).Text;
             var res = MessageBox.Show($"You realy want uninstall \"{name}\"?",
                 "Uninstall", MessageBoxButton.OKCancel);
             if(res == MessageBoxResult.OK) {

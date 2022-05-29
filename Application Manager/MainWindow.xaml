@@ -5,31 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Application_Manager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="760"
+        Title="App Manager" Height="600" Width="573"
         WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" WindowState="Normal" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
     <Grid>
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <!--ToolBar-->
         <StackPanel Orientation="Horizontal" Grid.Row="0" Background="#FFE8E6E6">
             <Button Name="btnUninstall" Content="Uninstall" Margin="5" IsEnabled="false"
                     Click="btnUninstall_Click"/>
         </StackPanel>
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <Label Content="Name" Margin="0 0 460 0"/>
-            <Label Content="Size" Margin="0 0 120 0"/>
-            <Label Content="Install date"/>
-        </StackPanel>
         
-        <!--Apps list-->
-        <ListBox Name="appList" Grid.Row="2" BorderBrush="Silver"
-                 SelectionChanged="appList_SelectionChanged"/>
+        <ListView Grid.Row="1" Name="appList" SelectionChanged="appList_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Version}">Version</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Size}">Size</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Publisher}">Publisher</GridViewColumn>
+                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=InstallationDate}">Install Time</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
